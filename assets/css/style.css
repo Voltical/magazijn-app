@@ -1,69 +1,300 @@
-/* Reset & basis */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ============== Reset & basis ============== */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+
+:root {
+  --bg: #f6f7fb;
+  --panel: #ffffff;
+  --text: #0f172a;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+
+  --brand: #0ea5e9;
+  --brand-700: #0284c7;
+
+  --input-bg: #f9fafb;
+  --input-border: #e5e7eb;
+
+  --shadow-soft: 0 10px 25px rgba(2, 6, 23, 0.12);
+  --panel-overlap-shadow: -28px 0 60px rgba(2, 6, 23, 0.35);
+
+  --radius: 12px;
+  --radius-pill: 999px;
+
+  --font-base: 16px;
+  --font-title: 32px;
+
+  --transition: 200ms ease;
 }
 
 html, body {
   height: 100%;
   width: 100%;
-  font-family: system-ui, sans-serif;
-  background: #f9fafb;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-size: var(--font-base);
+  color: var(--text);
+  background: var(--bg);
   overflow: hidden;
 }
 
-/* Foto links */
+/* ============== Linker foto ============== */
 .left-container {
   position: relative;
   width: 60%;
   height: 100vh;
   overflow: hidden;
 }
-
 .left-container .bg {
   position: absolute;
   inset: 0;
-  background: url('../images/bg.jpg') center/cover no-repeat;
+  background: url("../images/bg.jpg") center/cover no-repeat;
 }
 
-/* Rechter paneel dat iets over de foto heen gaat */
+/* ============== Rechter paneel ============== */
 .right-panel {
   position: absolute;
   top: 0;
   right: 0;
   height: 100vh;
-  width: 50%; /* iets over de foto heen */
-  background: #ffffff;
+  width: 50%;
+  background: var(--panel);
   z-index: 2;
-
-  /* schaduw aan linkerkant voor diepte */
-  box-shadow: -35px 0 60px rgba(0, 0, 0, 0.4);
-
-  /* binnenronding aan de linkerkant */
   border-top-left-radius: 5%;
   border-bottom-left-radius: 5%;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: var(--panel-overlap-shadow);
+  transition: box-shadow var(--transition);
 }
 
-/* Content in het paneel */
-.right-panel .content {
-  width: 80%;
-  max-width: 420px;
+/* ============== Inhoud container ============== */
+.content {
+  width: 86%;
+  max-width: 430px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.right-panel h1 {
-  font-size: 2.4rem;
-  font-weight: 800;
-  color: #111827;
-  margin-bottom: 1rem;
+/* ============== Logo (automatisch rond) ============== */
+.logo-circle {
+  width: 92px;
+  height: 92px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+.logo-circle img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
 }
 
-.right-panel p {
-  color: #6b7280;
-  font-size: 1rem;
+/* ============== Titels ============== */
+.title {
+  font-size: var(--font-title);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 8px 0 16px;
+}
+
+/* ============== Buttons ============== */
+.btn {
+  appearance: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: var(--radius-pill);
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background var(--transition), box-shadow var(--transition), border-color var(--transition);
+  text-decoration: none;
+  color: inherit;
+}
+.btn:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.25);
+}
+
+/* Microsoft-stijl OAuth knop */
+.oauth-btn {
+  background: #fff;
+  border: 1px solid #dbe2ea;
+  width: 100%;
+  box-shadow: 0 2px 0 rgba(2, 6, 23, 0.08);
+}
+.oauth-btn:hover { background: #f2f5f9; }
+
+/* Primair (submit) knop */
+.submit {
+  background: var(--brand);
+  color: #fff;
+  width: 100%;
+  border: none;
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.25);
+  margin-top: 10px; /* extra ruimte boven de knop */
+}
+.submit:hover { background: var(--brand-700); }
+.submit:disabled { opacity: 0.7; cursor: not-allowed; }
+
+/* Microsoft-logo in knop */
+.microsoft-logo {
+  width: 20px; height: 20px;
+  object-fit: contain; border-radius: 4px;
+}
+
+/* ============== Divider ============== */
+.divider {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0;
+  color: var(--muted);
+}
+.divider .line { height: 1px; background: var(--line); }
+.divider .or { font-size: 13px; font-weight: 700; }
+
+/* ============== Formulieren ============== */
+.form {
+  display: grid;
+  gap: 14px;
+  margin-top: 8px;
+  text-align: left;
+}
+.field { display: grid; gap: 6px; }
+.label { font-size: 13px; font-weight: 700; color: #374151; }
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  outline: none;
+  transition: border var(--transition), box-shadow var(--transition);
+}
+input::placeholder { color: #94a3b8; }
+input:focus {
+  background: #fff;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+}
+
+/* Foutweergave (optioneel) */
+input[aria-invalid="true"],
+input.user-invalid {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+  background: #fff;
+}
+.help-error {
+  color: #b91c1c;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* ============== Meta + Socials ============== */
+.meta {
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+  transition: opacity 0.2s ease;
+}
+.meta a {
+  color: var(--brand-700);
+  font-weight: 800;
+  text-decoration: none;
+}
+.meta a:hover { text-decoration: underline; }
+
+.socials {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 12px;
+}
+.ico {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  color: #111827; text-decoration: none;
+  background: #f3f4f6; border: 1px solid #e5e7eb;
+  transition: background var(--transition);
+}
+.ico:hover { background: #e7e9ee; }
+
+/* ============== Alerts ============== */
+.alert {
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 16px; /* ruimte onder de alert */
+}
+.alert-error {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+.alert-success {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+/* ============== Login/Register toggle ============== */
+.auth {
+  position: relative;
+  min-height: 440px; /* vaste hoogte */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Forms/titels */
+.auth .login-form,
+.auth .login-title { display: none; }
+
+.auth.login-active .login-form,
+.auth.login-active .login-title { display: block; }
+
+.auth.login-active .register-form,
+.auth.login-active .register-title { display: none; }
+
+.auth.register-active .register-form,
+.auth.register-active .register-title { display: block; }
+
+/* Vaste positie voor de meta tekst */
+.auth .meta {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* ============== Responsive ============== */
+@media (max-width: 980px) {
+  .left-container { display: none; }
+  .right-panel {
+    width: 100%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: none;
+  }
+  .content { max-width: 520px; }
 }
