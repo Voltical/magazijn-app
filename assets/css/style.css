@@ -1,0 +1,69 @@
+/* Reset & basis */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: system-ui, sans-serif;
+  background: #f9fafb;
+  overflow: hidden;
+}
+
+/* Foto links */
+.left-container {
+  position: relative;
+  width: 60%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.left-container .bg {
+  position: absolute;
+  inset: 0;
+  background: url('../images/bg.jpg') center/cover no-repeat;
+}
+
+/* Rechter paneel dat iets over de foto heen gaat */
+.right-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 50%; /* iets over de foto heen */
+  background: #ffffff;
+  z-index: 2;
+
+  /* schaduw aan linkerkant voor diepte */
+  box-shadow: -35px 0 60px rgba(0, 0, 0, 0.4);
+
+  /* binnenronding aan de linkerkant */
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content in het paneel */
+.right-panel .content {
+  width: 80%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.right-panel h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.right-panel p {
+  color: #6b7280;
+  font-size: 1rem;
+}
