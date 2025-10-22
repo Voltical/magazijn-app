@@ -50,3 +50,14 @@ justify-content: center;
   font-size: 1.1rem;
 }
 
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo{
+  width: 100px;
+  height: 80px;
+}

@@ -16,10 +16,17 @@
   <a href="#" class="sidebar-btn"><i class="fas fa-box"></i> Opslag</a>
   <a href="#" class="sidebar-btn"><i class="fas fa-chart-line"></i> Grafiek</a>
 </div>
-<img src="" alt="">
-<img src="" alt="">
-<img src="" alt="">
-<img src="" alt="">
+
+<div class="logo-container">
+<img src="../assets/images/huis.png" class="logo" id="huis"alt="logo huisje">
+<img src="../assets/images/monitor.png" class="logo" alt="logo monitor">
+<img src="../assets/images/doos.png" class="logo" alt="logo doos">
+<img src="../assets/images/grafiek.png"class="logo" alt="logo grafiek">
+  </div>
+
+  
+  <div class="right-panel">
+    <div class="content">
 
 
 
