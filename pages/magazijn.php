@@ -9,11 +9,20 @@
 <body>
       <div class="left-container">
     <div class="bg"></div>
-    <div class="buttons"></div>
-    <button>Dashboard</button>
-    <button>Placeholder</button>
-    <button>Opslag</button>
-    <button>Grafiek</button>
+
+    <div class="sidebar-buttons">
+  <a href="#" class="sidebar-btn active"><i class="fas fa-lock"></i> Dashboard</a>
+  <a href="#" class="sidebar-btn"><i class="fas fa-desktop"></i> Placeholder</a>
+  <a href="#" class="sidebar-btn"><i class="fas fa-box"></i> Opslag</a>
+  <a href="#" class="sidebar-btn"><i class="fas fa-chart-line"></i> Grafiek</a>
+</div>
+<img src="" alt="">
+<img src="" alt="">
+<img src="" alt="">
+<img src="" alt="">
+
+
+
 </div>
 
 </body>
