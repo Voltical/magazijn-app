@@ -8,9 +8,8 @@
 </head>
 <body>
       <div class="left-container">
-    <div class="bg"></div>
-
-    <div class="sidebar-buttons">
+    <div class="sidebar-buttons"> 
+    
   <a href="#" class="sidebar-btn"><i class="fas fa-lock"></i> Dashboard</a>
   <a href="#" class="sidebar-btn"><i class="fas fa-desktop"></i> Placeholder</a>
   <a href="#" class="sidebar-btn"><i class="fas fa-box"></i> Opslag</a>
@@ -24,13 +23,6 @@
 <img src="../assets/images/grafiek.png"class="logo" alt="logo grafiek">
   </div>
 
-  
-  <div class="right-panel">
-    <div class="content">
-
-
-
-</div>
 
 </body>
 </html>
