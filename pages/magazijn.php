@@ -11,7 +11,7 @@
     <div class="bg"></div>
 
     <div class="sidebar-buttons">
-  <a href="#" class="sidebar-btn active"><i class="fas fa-lock"></i> Dashboard</a>
+  <a href="#" class="sidebar-btn"><i class="fas fa-lock"></i> Dashboard</a>
   <a href="#" class="sidebar-btn"><i class="fas fa-desktop"></i> Placeholder</a>
   <a href="#" class="sidebar-btn"><i class="fas fa-box"></i> Opslag</a>
   <a href="#" class="sidebar-btn"><i class="fas fa-chart-line"></i> Grafiek</a>
