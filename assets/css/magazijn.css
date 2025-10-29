@@ -56,3 +56,78 @@
   object-fit: contain;
 }
 
+.content {
+  margin-left: 18%;
+  padding: 30px;
+  color: #1F4952;
+  font-family: Arial, sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+input, textarea, button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+button {
+  background-color: #1F4952;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #297884;
+}
+
+.item-list {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item-card {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e9f3f5;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.item-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.delete-btn {
+  background-color: #c0392b;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #e74c3c;
+}

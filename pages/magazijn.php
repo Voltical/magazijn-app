@@ -16,7 +16,7 @@
 
       <a href="placeholder.php" class="sidebar-btn">
         <img src="../assets/images/monitor.png" class="icon" alt="monitor icoon">
-        Placeholder
+        placeholder
       </a>
 
       <a href="opslag.php" class="sidebar-btn">
