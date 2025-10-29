@@ -9,26 +9,25 @@
 <body>
   <div class="left-container">
     <div class="sidebar-buttons"> 
-      
-      <a href="../pages voor magazijn/dashboard.php"><button class="sidebar-btn">    
-      <img src="../assets/images/huis.png" class="icon" alt="huis icoon">
+      <a href="dash_board.php" class="sidebar-btn">
+        <img src="../assets/images/huis.png" class="icon" alt="huis icoon">
         Dashboard
-      </button></a>
+      </a>
 
-      <a href="../placeholder.php"><button class="sidebar-btn">
+      <a href="placeholder.php" class="sidebar-btn">
         <img src="../assets/images/monitor.png" class="icon" alt="monitor icoon">
         Placeholder
-      </button>
+      </a>
 
-      <a href="../opslag.php"><button class="sidebar-btn">
+      <a href="opslag.php" class="sidebar-btn">
         <img src="../assets/images/doos.png" class="icon" alt="doos icoon">
         Opslag
-      </button>
+      </a>
 
-      <a href="../grafiek.php"><button class="sidebar-btn">
+      <a href="grafiek.php" class="sidebar-btn">
         <img src="../assets/images/grafiek.png" class="icon" alt="grafiek icoon">
         Grafiek
-      </button></a>
+      </a>
     </div>
   </div>
 </body>
